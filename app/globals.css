@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 25% 97%;
+    --foreground: 220 40% 18%;
+
+    --primary: 220 40% 18%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 36 73% 58%;
+    --secondary-foreground: 220 40% 18%;
+
+    --border: 220 20% 88%;
+    --input: 220 20% 88%;
+    --ring: 220 40% 18%;
+  }
+
+  .dark {
+    --background: 218 39% 8%;
+    --foreground: 40 25% 97%;
+
+    --primary: 40 25% 97%;
+    --primary-foreground: 220 40% 18%;
+
+    --border: 220 20% 22%;
+    --input: 220 20% 22%;
+    --ring: 40 25% 97%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
