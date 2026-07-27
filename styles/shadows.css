@@ -1,0 +1,35 @@
+/**
+ * Shadow scale.
+ * Shadows are tinted with the ink brand color (#1B2A4A → rgb(27, 42, 74))
+ * rather than neutral gray, per the approved design system.
+ */
+
+@layer base {
+  :root {
+    --shadow-color: 27, 42, 74;
+    --shadow-sm: 0 1px 3px rgba(var(--shadow-color), 0.08);
+    --shadow-md: 0 4px 12px rgba(var(--shadow-color), 0.12);
+    --shadow-lg: 0 12px 32px rgba(var(--shadow-color), 0.18);
+  }
+
+  .dark {
+    --shadow-color: 0, 0, 0;
+    --shadow-sm: 0 1px 3px rgba(var(--shadow-color), 0.3);
+    --shadow-md: 0 4px 12px rgba(var(--shadow-color), 0.4);
+    --shadow-lg: 0 12px 32px rgba(var(--shadow-color), 0.5);
+  }
+}
+
+@layer components {
+  .shadow-brand-sm {
+    box-shadow: var(--shadow-sm);
+  }
+
+  .shadow-brand-md {
+    box-shadow: var(--shadow-md);
+  }
+
+  .shadow-brand-lg {
+    box-shadow: var(--shadow-lg);
+  }
+}

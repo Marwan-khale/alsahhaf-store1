@@ -6,7 +6,7 @@
 export default function HomePage() {
   return (
     <main className="flex min-h-screen items-center justify-center p-8">
-      <p className="text-sm text-muted">
+      <p className="text-sm text-muted-foreground">
         هيكل المشروع الأساسي جاهز — لا توجد صفحات متجر بعد.
       </p>
     </main>

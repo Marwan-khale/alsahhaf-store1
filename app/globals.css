@@ -2,10 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "../styles/typography.css";
+@import "../styles/spacing.css";
+@import "../styles/shadows.css";
+@import "../styles/animations.css";
+
 @layer base {
   :root {
     --background: 40 25% 97%;
     --foreground: 220 40% 18%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 40% 18%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 40% 18%;
 
     --primary: 220 40% 18%;
     --primary-foreground: 0 0% 100%;
@@ -13,17 +24,46 @@
     --secondary: 36 73% 58%;
     --secondary-foreground: 220 40% 18%;
 
+    --muted: 220 20% 94%;
+    --muted-foreground: 220 15% 45%;
+
+    --accent: 220 20% 92%;
+    --accent-foreground: 220 40% 18%;
+
+    --destructive: 0 50% 45%;
+    --destructive-foreground: 0 0% 100%;
+
     --border: 220 20% 88%;
     --input: 220 20% 88%;
     --ring: 220 40% 18%;
+
+    --radius: 0.75rem;
   }
 
   .dark {
     --background: 218 39% 8%;
     --foreground: 40 25% 97%;
 
+    --card: 218 30% 11%;
+    --card-foreground: 40 25% 97%;
+
+    --popover: 218 30% 11%;
+    --popover-foreground: 40 25% 97%;
+
     --primary: 40 25% 97%;
     --primary-foreground: 220 40% 18%;
+
+    --secondary: 36 73% 58%;
+    --secondary-foreground: 220 40% 18%;
+
+    --muted: 220 20% 16%;
+    --muted-foreground: 220 15% 65%;
+
+    --accent: 220 20% 18%;
+    --accent-foreground: 40 25% 97%;
+
+    --destructive: 0 50% 55%;
+    --destructive-foreground: 0 0% 100%;
 
     --border: 220 20% 22%;
     --input: 220 20% 22%;

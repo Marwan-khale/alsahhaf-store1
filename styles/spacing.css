@@ -1,0 +1,15 @@
+/**
+ * Spacing scale.
+ * Semantic spacing tokens for layout rhythm, on top of Tailwind's default
+ * spacing scale (used directly for most utility spacing needs).
+ */
+
+@layer base {
+  :root {
+    --space-card-padding: 1rem; /* 16px */
+    --space-section-gap-mobile: 3rem; /* 48px */
+    --space-section-gap-desktop: 5rem; /* 80px */
+    --space-page-padding-mobile: 1.25rem; /* 20px */
+    --space-page-padding-desktop: 2rem; /* 32px */
+  }
+}

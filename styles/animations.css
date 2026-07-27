@@ -1,0 +1,30 @@
+/**
+ * Animation keyframes.
+ * Deliberately minimal — most interactive component transitions
+ * (dialog/sheet/dropdown open-close) are handled by the tailwindcss-animate
+ * plugin via data-state utility classes. These are the few additions not
+ * covered by that plugin. Respects prefers-reduced-motion.
+ */
+
+@layer utilities {
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(4px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 0.2s ease-out;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-fade-in-up {
+      animation: none;
+    }
+  }
+}

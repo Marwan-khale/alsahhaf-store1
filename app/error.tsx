@@ -8,7 +8,7 @@ export default function Error({
 }) {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center gap-4 p-8 text-center">
-      <p className="text-sm text-muted">حدث خطأ غير متوقع.</p>
+      <p className="text-sm text-muted-foreground">حدث خطأ غير متوقع.</p>
       <button
         onClick={reset}
         className="rounded-md bg-ink px-4 py-2 text-sm font-semibold text-white"
