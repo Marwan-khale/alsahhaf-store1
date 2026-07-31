@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { IBM_Plex_Sans_Arabic, Cairo } from "next/font/google";
 
 import { AppProviders } from "@/providers/AppProviders";
+import { StoreShell } from "@/components/layout/StoreShell";
 import { siteConfig } from "@/config/siteConfig";
 
 import "./globals.css";
@@ -25,7 +26,8 @@ export const metadata: Metadata = {
 
 /**
  * Root layout.
- * RTL/Arabic shell and global providers only — no page or business content.
+ * RTL/Arabic shell, global providers, and the shared store chrome
+ * (Header/Footer via StoreShell) — no page-specific content here.
  */
 export default function RootLayout({
   children,
@@ -35,7 +37,9 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl" className={`${fontHeading.variable} ${fontBody.variable}`}>
       <body className="font-body antialiased">
-        <AppProviders>{children}</AppProviders>
+        <AppProviders>
+          <StoreShell>{children}</StoreShell>
+        </AppProviders>
       </body>
     </html>
   );

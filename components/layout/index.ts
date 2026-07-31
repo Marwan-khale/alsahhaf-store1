@@ -14,3 +14,4 @@ export * from "@/components/layout/CartButton";
 export * from "@/components/layout/WishlistButton";
 export * from "@/components/layout/LanguageSwitcher";
 export * from "@/components/layout/Breadcrumb";
+export * from "@/components/layout/StoreShell";
